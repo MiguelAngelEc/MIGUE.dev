@@ -1,0 +1,39 @@
+---
+import logo from "../assets/logo.svg";
+---
+
+<nav class="flex justify-between p-1 mr-10 ml-10">
+    <img src={logo.src} alt="Logo" class="w-20 h-auto max-w-full object-contain"/>
+    <ul class="flex gap-6 items-center">
+        <li class="group">
+            <a href="/" class="relative">
+                ~/home
+                <span class="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </li>
+        <li class="group">
+            <a href="/" class="relative">
+                const me = {}
+                <span class="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </li>
+        <li class="group">
+            <a href="/" class="relative">
+                build()
+                <span class="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </li>
+        <li class="group">
+            <a href="/" class="relative">
+                fav()
+                <span class="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </li>
+        <li class="group">
+            <a href="/" class="relative">
+                log
+                <span class="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </li>
+    </ul>
+</nav>

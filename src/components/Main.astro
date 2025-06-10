@@ -1,13 +1,32 @@
 ---
-import logoMain from "../assets/logo-main.svg";
+
 ---
 
-<main class="flex flex-col w-full h-full bg-black">
-    <div class="flex flex-col text-white items-left h-[100vh]w-[100vw]">
-        <img src={logoMain.src} alt="Logo" class="w-[20rem] h-[10rem] "/>
-        <h1 >Coding with character.</h1>
-        <p>Self-taught developer focused on frontend magic, backend logic and bringing ideas to life.
-        </p>
+<main class="flex flex-col w-full h-full">
+    <div class="flex flex-col items-center justify-center h-[70vh] w-[50vw] text-right px-4">
+        <div class="max-w-3xl w-full">
+            <h1 class="text-[8.5vw] font-bold text-black">MIGUE<span class="text-transparent custom-stroke">dev</span></h1>
+            <h2 class="text-3xl font-semibold mt-2">Coding with character.</h2>
+            <p class="mt-2">Self-taught developer focused on frontend magic, backend logic and bringing ideas to life.</p>
+        </div>
     </div>
     
 </main>
+<script>
+  import { initMainAnimations } from '../animations/mainAnimations.js';
+  
+  // Ejecutar cuando el DOM esté listo
+  document.addEventListener('DOMContentLoaded', () => {
+    initMainAnimations();
+  });
+</script>
+
+<style>
+    .custom-stroke {
+      -webkit-text-stroke: 3px black;
+    }
+    /* Estilos para los caracteres animados */
+    .char {
+      display: inline-block;
+    }
+</style>

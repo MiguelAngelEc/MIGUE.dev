@@ -2,38 +2,100 @@
 import logo from "../assets/logo.svg";
 ---
 
-<nav class="flex justify-between p-1 mr-10 ml-10">
-    <img src={logo.src} alt="Logo" class="w-20 h-auto max-w-full object-contain"/>
-    <ul class="flex gap-6 items-center">
+<nav class="flex justify-between items-center p-4 md:p-1 md:mr-10 md:ml-10 bg-white/10 backdrop-blur-sm">
+    <!-- Logo (responsive) -->
+    <a href="/">
+        <img 
+            src={logo.src} 
+            alt="Logo" 
+            class="w-14 h-auto md:w-20 object-contain hover:scale-105 transition-transform" 
+        />
+    </a>
+
+    <!-- Botón Hamburguesa (solo mobile/tablet) -->
+    <button 
+        id="menu-toggle"
+        class="md:hidden text-2xl focus:outline-none z-50"
+        aria-label="Abrir menú"
+    >
+        ☰
+    </button>
+
+    <!-- Menú Desktop (solo desktop) -->
+    <ul class="hidden md:flex gap-4 lg:gap-6 items-center">
         <li class="group">
-            <a href="/" class="relative">
+            <a href="/" class="relative text-sm lg:text-base">
                 ~/home
                 <span class="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full"></span>
             </a>
         </li>
         <li class="group">
-            <a href="/" class="relative">
-                const me = [ ]
+            <a href="/about" class="relative text-sm lg:text-base">
+                const me = []
                 <span class="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full"></span>
             </a>
         </li>
         <li class="group">
-            <a href="/" class="relative">
-                build( )
+            <a href="/projects" class="relative text-sm lg:text-base">
+                build()
                 <span class="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full"></span>
             </a>
         </li>
         <li class="group">
-            <a href="/" class="relative">
-                fav( )
+            <a href="/blog" class="relative text-sm lg:text-base">
+                fav()
                 <span class="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full"></span>
             </a>
         </li>
         <li class="group">
-            <a href="/" class="relative">
+            <a href="/contact" class="relative text-sm lg:text-base">
                 log
                 <span class="absolute left-0 -bottom-1 w-0 h-px bg-current transition-all duration-300 group-hover:w-full"></span>
             </a>
         </li>
     </ul>
+
+    <!-- Menú Mobile/Tablet (overlay) -->
+    <!-- <div 
+        id="mobile-menu"
+        class="fixed inset-0 bg-black/95 backdrop-blur-lg z-40 flex-col items-center justify-center space-y-8 hidden md:flex"
+    >
+        <button 
+            id="menu-close"
+            class="absolute top-6 right-6 text-2xl text-white hover:text-gray-300"
+            aria-label="Cerrar menú"
+        >
+            ✕
+        </button>
+        <ul class="text-center space-y-8">
+            <li>
+                <a href="/" class="text-2xl text-white hover:text-blue-400 transition-colors">~/home</a>
+            </li>
+            <li>
+                <a href="/about" class="text-2xl text-white hover:text-blue-400 transition-colors">const me = []</a>
+            </li>
+            <li>
+                <a href="/projects" class="text-2xl text-white hover:text-blue-400 transition-colors">build()</a>
+            </li>
+            <li>
+                <a href="/blog" class="text-2xl text-white hover:text-blue-400 transition-colors">fav()</a>
+            </li>
+            <li>
+                <a href="/contact" class="text-2xl text-white hover:text-blue-400 transition-colors">log</a>
+            </li>
+        </ul>
+    </div> -->
 </nav>
+
+<!-- Script para el menú hamburguesa -->
+<!-- <script is:inline>
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.remove("hidden");
+        document.body.style.overflow = "hidden"; // Bloquea el scroll
+    });
+
+    document.getElementById("menu-close").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.add("hidden");
+        document.body.style.overflow = "auto"; // Restaura el scroll
+    });
+</script> -->

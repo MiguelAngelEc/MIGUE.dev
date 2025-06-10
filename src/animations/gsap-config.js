@@ -1,10 +1,11 @@
-// src/scripts/gsap-config.js
+// src/animations/gsap-config.js
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
+import { SplitText } from 'gsap/SplitText';
 
 // Registrar plugins que vas a usar
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
+gsap.registerPlugin(ScrollTrigger, TextPlugin, SplitText);
 
 // Configuración global de GSAP
 gsap.config({
@@ -18,4 +19,4 @@ gsap.defaults({
   ease: "power2.out"
 });
 
-export { gsap, ScrollTrigger };
+export { gsap, ScrollTrigger, SplitText };
